@@ -1,3 +1,4 @@
+import * as BABYLON from 'babylonjs/es6';
 import { createScene } from './resources/scene.js';
 import loadHandlers from './resources/handlers.js';
 
