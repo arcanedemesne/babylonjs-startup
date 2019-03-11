@@ -10,8 +10,19 @@ const createScene = ({ canvas, engine }) => {
   const light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
   const light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
+  // Create source plane
+  const sourcePlane = new BABYLON.Plane(0, .5, 0, 0);
+      sourcePlane.normalize();
+
   // Add and manipulate meshes in the scene
-  const box = BABYLON.MeshBuilder.CreateBox("box", { height: .5, width: 0.75, depth: 0.85 }, scene);
+  const sideOrientation = BABYLON.Mesh.DOUBLESIDE;
+  const plane = BABYLON.MeshBuilder.CreatePlane("plane",
+    {
+      sourcePlane,
+      sideOrientation,
+      width: 1,
+      height: .75,
+    }, scene);
 
   return scene;
 };
