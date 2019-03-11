@@ -20,9 +20,6 @@ const createScene = ({ canvas, engine }) => {
     // Move the sphere upward 1/2 of its height.
     sphere.position.y = 1;
 
-    // Create a built-in "ground" shape.
-    const ground = BABYLON.MeshBuilder.CreateGround('ground1', {height:6, width:6, subdivisions: 2}, scene);
-
     // Return the created scene.
     return scene;
 };
