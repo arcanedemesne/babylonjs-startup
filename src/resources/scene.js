@@ -11,7 +11,7 @@ const createScene = ({ canvas, engine }) => {
   const light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
   // Add and manipulate meshes in the scene
-  const box = BABYLON.MeshBuilder.CreateBox("box", {height: .5, width: 0.75, depth: 0.85}, scene);
+  const box = BABYLON.MeshBuilder.CreateBox("box", { height: .5, width: 0.75, depth: 0.85 }, scene);
 
   return scene;
 };
